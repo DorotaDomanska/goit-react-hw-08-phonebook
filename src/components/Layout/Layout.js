@@ -1,14 +1,12 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import css from './Layout.module.css';
-import { useDispatch } from 'react-redux';
-import { signOut } from '../../redux/auth/operations';
+import { UserMenu } from 'components/UserMenu';
+
 import { useAuth } from '../../hook/useAuth';
 
 export const Layout = () => {
   const { isAuthorized } = useAuth();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const handleSignOut = () => dispatch(signOut());
 
   return (
     <main className={css.container}>
@@ -19,7 +17,7 @@ export const Layout = () => {
             <button onClick={() => navigate('register')}>Register</button>
           </>
         )}
-        {isAuthorized && <button onClick={handleSignOut}>Sign out</button>}
+        {isAuthorized && <UserMenu />}
       </nav>
       <Outlet />
     </main>
