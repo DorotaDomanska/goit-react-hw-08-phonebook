@@ -1,7 +1,6 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import css from './Layout.module.css';
 import { UserMenu } from 'components/UserMenu';
-
 import { useAuth } from '../../hook/useAuth';
 
 export const Layout = () => {
@@ -13,8 +12,12 @@ export const Layout = () => {
       <nav className={css.nav}>
         {!isAuthorized && (
           <>
-            <button onClick={() => navigate('sign-in')}>Sign in</button>
-            <button onClick={() => navigate('register')}>Register</button>
+            <button className={css.button} onClick={() => navigate('sign-in')}>
+              Sign in
+            </button>
+            <button className={css.button} onClick={() => navigate('register')}>
+              Register
+            </button>
           </>
         )}
         {isAuthorized && <UserMenu />}

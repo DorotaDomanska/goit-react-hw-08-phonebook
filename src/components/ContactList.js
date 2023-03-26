@@ -1,5 +1,5 @@
 import { ContactListItem } from './ContactListItem';
-import css from './Phonebook.module.css';
+import css from '../Phonebook.module.css';
 
 export const ContactList = () => {
   return (

@@ -5,7 +5,7 @@ import { selectIsLoading, selectError } from 'redux/contacts/selectors';
 import { ContactForm } from '../components/ContactForm';
 import { Filter } from '../components/Filter';
 import { ContactList } from '../components/ContactList';
-import css from '../components/Phonebook.module.css';
+import css from '../Phonebook.module.css';
 
 export const Phonebook = () => {
   const dispatch = useDispatch();
