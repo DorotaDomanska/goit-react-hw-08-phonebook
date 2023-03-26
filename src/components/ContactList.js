@@ -3,8 +3,8 @@ import css from '../Phonebook.module.css';
 
 export const ContactList = () => {
   return (
-    <ul className={css.list}>
+    <div className={css.contacts}>
       <ContactListItem />
-    </ul>
+    </div>
   );
 };

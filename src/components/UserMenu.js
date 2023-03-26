@@ -11,7 +11,9 @@ export const UserMenu = () => {
   return (
     <div className={css.userMenu}>
       <p>{email}</p>
-      <button onClick={handleSignOut}>Sign out</button>
+      <button className={css.button} onClick={handleSignOut}>
+        Sign out
+      </button>
     </div>
   );
 };

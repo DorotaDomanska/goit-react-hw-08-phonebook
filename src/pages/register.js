@@ -20,9 +20,9 @@ export const Register = () => {
 
   return (
     <div className={css.mainPage}>
-      <div className={css.boxSignIn}>
+      <div className={css.box}>
         <form
-          className={css.formSignIn}
+          className={css.form}
           onSubmit={handleSubmit}
           autoComplete="off"
         >

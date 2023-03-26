@@ -19,15 +19,15 @@ export const ContactListItem = () => {
   );
 
   return (
-    <div>
+    <ul className={css.list}>
       {filteredContacts.map(({ id, name, number }) => (
-        <li key={id}>
+        <li key={id} className={css.contactListItem}>
           {name}: {number}
           <button id={id} className={css.deleteButton} onClick={handleDelete}>
             Delete
           </button>
         </li>
       ))}
-    </div>
+    </ul>
   );
 };

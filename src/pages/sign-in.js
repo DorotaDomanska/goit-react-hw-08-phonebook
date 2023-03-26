@@ -18,12 +18,8 @@ export const SignIn = () => {
 
   return (
     <div className={css.mainPage}>
-      <div className={css.boxSignIn}>
-        <form
-          className={css.formSignIn}
-          onSubmit={handleSubmit}
-          autoComplete="off"
-        >
+      <div className={css.box}>
+        <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
           <label className={css.label}>
             Email
             <input className={css.input} type="email" name="email" />
